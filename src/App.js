@@ -24,7 +24,6 @@ function App() {
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
   const [caseType, setCaseType] = useState("cases");
-  const [isActive, setIsActive] = useState("cases");
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
@@ -77,8 +76,6 @@ function App() {
       });
       setMapZoom(4);
     }
-
-    // console.log(responseData);
   };
 
   return (
@@ -87,7 +84,7 @@ function App() {
       <div className="app__left">
         {/* Header */}
         <div className="app__header">
-          <h1>COVID-19 Tracker</h1>
+          <h1>COVID-19 Outbreak Analytics</h1>
 
           {/* Title + Select DropDown field */}
           <FormControl className="app__dropdown">
